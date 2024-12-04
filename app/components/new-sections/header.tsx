@@ -33,7 +33,14 @@ export function Header() {
 						{/* Logo */}
 						<Link href="/" className="flex items-center space-x-2">
 							<div className="flex items-center cursor-pointer min-h-16">
-								<Image src={'/logo.svg'} height={50} width={120} alt="tracko logo" />
+								<Image
+									quality={100}
+									priority
+									src={'/logo.svg'}
+									height={50}
+									width={120}
+									alt="tracko logo"
+								/>
 							</div>
 						</Link>
 
