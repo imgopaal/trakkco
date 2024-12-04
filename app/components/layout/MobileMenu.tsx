@@ -27,7 +27,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
 	if (!isOpen) return null
 
 	return (
-		<div className="fixed inset-0 z-50 md:hidden">
+		<div className="fixed inset-0 z-50">
 			<div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
 			<div className="fixed right-0 top-0 bottom-0 w-full max-w-sm bg-purple-900/90 backdrop-blur-xl p-6">
 				<div className="flex items-center justify-between mb-8">
