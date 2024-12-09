@@ -3,6 +3,7 @@
 import { Button } from '@/components/ui/button'
 import { useContentStore } from '@/app/store/content'
 import Image from 'next/image'
+import Dashboard from '../Dashboard'
 
 export function Hero() {
 	const hero = useContentStore(state => state.hero)
@@ -29,12 +30,13 @@ export function Hero() {
 					<p className="text-xl md:text-2xl text-gray-300 max-w-[800px]">{hero.tagline}</p>
 					<Button
 						size={'lg'}
-						className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-lg text-lg font-medium transition-all transform hover:scale-105"
+						className="font-bold bg-purple-600 hover:bg-purple-700 text-white px-8 py-6 rounded-lg text-lg transition-all transform hover:scale-105"
 					>
 						{hero.cta}
 					</Button>
 				</div>
 			</div>
+			<Dashboard />
 		</div>
 	)
 }

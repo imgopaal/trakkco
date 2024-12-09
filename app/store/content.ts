@@ -13,7 +13,7 @@ export const useContentStore = create<ContentStore>(() => ({
 	hero: {
 		title: 'Your Expertise, Supercharged by AI',
 		tagline: 'Precision, compliance, and control—all guided by you.',
-		cta: 'Get Started',
+		cta: 'Get Started - 30 Days Risk Free',
 	},
 	sections: [
 		{

@@ -22,17 +22,43 @@ const PricingCard: React.FC<PricingCardProps> = ({
 			</div>
 		)}
 		<div className="mb-8">
-			<h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
-			<div className="flex items-baseline gap-x-2">
-				<span className="text-4xl font-bold text-white">${price}</span>
-				<span className="text-gray-400">/month</span>
+			<div className="flex justify-between">
+				<h3 className="text-2xl font-bold text-white mb-2">{title}</h3>
+				{price === 'coming-soon' && (
+					<div className="bg-purple-900/50 text-white text-sm rounded-full py-[2px] h-6 px-2 flex items-center justify-center">
+						Coming soon
+					</div>
+				)}
+			</div>
+
+			<div
+				className={
+					price === 'coming-soon'
+						? 'animate-pulse bg-purple-800 opacity-10 text-purple-800 py-[2px] h-6 mt-3 rounded-lg'
+						: `flex items-baseline gap-x-2`
+				}
+			>
+				{price !== 'coming-soon' && (
+					<>
+						<span className="text-4xl font-bold text-white">${price}</span>
+						<span className="text-gray-400">/ month</span>
+					</>
+				)}
 			</div>
 		</div>
 		<ul className="space-y-4 flex-grow mb-8">
 			{features.map((feature, index) => (
 				<li key={index} className="flex items-center gap-x-3 text-gray-300">
 					<Check className="h-5 w-5 text-purple-400 flex-shrink-0" />
-					<span>{feature.text}</span>
+					<span
+						className={
+							feature.text === 'mock'
+								? 'animate-pulse bg-purple-800 opacity-10 text-purple-800 text-sm pl-1 py-[2px] w-full rounded-lg'
+								: ''
+						}
+					>
+						{feature.text}
+					</span>
 				</li>
 			))}
 		</ul>
@@ -57,47 +83,58 @@ const Pricing: React.FC = () => {
 
 	const plans: PricingPlan[] = [
 		{
-			title: 'Starter',
-			price: '29',
+			title: 'Core',
+			price: '180.00',
 			ctaText: 'Get Started',
 			features: [
-				{ text: 'Up to 5 team members', included: true },
-				{ text: 'Basic time tracking', included: true },
-				{ text: 'Project management', included: true },
-				{ text: 'Email support', included: true },
-				{ text: 'Mobile app access', included: true },
-				{ text: 'Basic reporting', included: true },
+				{ text: 'Up to 5 Team Members', included: true },
+				{ text: 'Care Plan Workflows', included: true },
+				{ text: 'Risk Assessment Workflows', included: true },
+				{ text: 'Reports Workflows', included: true },
+				{
+					text: 'Document Generation: Instantly create professional and compliant care documents.',
+					included: true,
+				},
+				{
+					text: 'Real-Time Document Updating: Make edits seamlessly, with changes reflected instantly across your system.',
+					included: true,
+				},
+				{
+					text: 'Ticket and Email Support: Get responsive assistance when you need it.',
+					included: true,
+				},
 			],
 		},
 		{
-			title: 'Professional',
-			price: '79',
-			isPopular: true,
-			ctaText: 'Get Started',
+			title: 'Pro',
+			price: 'coming-soon',
+			ctaText: 'Learn More',
 			features: [
-				{ text: 'Up to 15 team members', included: true },
-				{ text: 'Advanced time tracking', included: true },
-				{ text: 'Project & task management', included: true },
-				{ text: 'Priority support', included: true },
-				{ text: 'Mobile & desktop apps', included: true },
-				{ text: 'Advanced analytics', included: true },
-				{ text: 'Custom workflows', included: true },
-				{ text: 'Team productivity insights', included: true },
+				{ text: 'mock', included: false },
+				{ text: 'mock', included: false },
+				{ text: 'mock', included: false },
+				{ text: 'mock', included: false },
+				{ text: 'mock', included: false },
+				{ text: 'mock', included: false },
+				{ text: 'mock', included: false },
+				{ text: 'mock', included: false },
+				{ text: 'mock', included: false },
 			],
 		},
 		{
 			title: 'Enterprise',
-			price: '199',
-			ctaText: 'Contact Sales',
+			price: 'coming-soon',
+			ctaText: 'Learn More',
 			features: [
-				{ text: 'Unlimited team members', included: true },
-				{ text: 'Enterprise-grade security', included: true },
-				{ text: 'Custom integrations', included: true },
-				{ text: '24/7 dedicated support', included: true },
-				{ text: 'All apps & features', included: true },
-				{ text: 'Advanced reporting & API', included: true },
-				{ text: 'SSO & admin controls', included: true },
-				{ text: 'Custom training', included: true },
+				{ text: 'mock', included: false },
+				{ text: 'mock', included: false },
+				{ text: 'mock', included: false },
+				{ text: 'mock', included: false },
+				{ text: 'mock', included: false },
+				{ text: 'mock', included: false },
+				{ text: 'mock', included: false },
+				{ text: 'mock', included: false },
+				{ text: 'mock', included: false },
 			],
 		},
 	]
@@ -105,7 +142,7 @@ const Pricing: React.FC = () => {
 	return (
 		<section id="pricing" className="py-24 relative">
 			<div className="absolute inset-0 bg-gradient-to-b from-black/50 to-purple-900/20"></div>
-			<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div className="relative max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="text-center mb-16">
 					<h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Simple, Transparent Pricing</h2>
 					<p className="text-gray-400 max-w-2xl mx-auto">
