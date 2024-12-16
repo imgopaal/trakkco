@@ -75,6 +75,17 @@ interface FAQItem {
 	answer: string
 }
 
+interface Feature {
+	title: string
+	description: string
+}
+
+interface TopFeatures {
+	title: string
+	subtitle: string
+	features: Feature[]
+}
+
 export interface ContentStore {
 	navigation: NavItem[]
 	hero: {
@@ -89,4 +100,5 @@ export interface ContentStore {
 		tiers: PricingTier[]
 	}
 	faq: FAQItem[]
+	topFeatures: TopFeatures
 }

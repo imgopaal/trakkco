@@ -18,7 +18,7 @@ export function EdgeSection() {
 					<div className="mt-8 p-6 bg-purple-800/50 rounded-lg backdrop-blur-sm">
 						<h3 className="text-2xl font-semibold">{edge?.guarantee?.title || ''}</h3>
 						<p className="mt-2 text-white">{edge?.guarantee?.content || ''}</p>
-						<Button className="mt-4 bg-purple-900 hover:bg-purple-800/30">{edge?.guarantee?.cta || ''}</Button>
+						<Button className="mt-4 bg-purple-900 hover:bg-purple-800/30 max-w-full p-x-3">{edge?.guarantee?.cta || ''}</Button>
 					</div>
 				</div>
 			</div>

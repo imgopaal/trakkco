@@ -9,7 +9,8 @@ import {
 	Header,
 	Hero,
 	WhyTrakkCoSection,
-	FAQSection
+	FAQSection,
+	TopFeatures
 } from './components/new-sections/index'
 
 import Pricing from './components/sections/Pricing'
@@ -21,6 +22,7 @@ function Home() {
 			<Header />
 			<main>
 				<Hero />
+				<TopFeatures />
 				<EdgeSection />
 				<ChallengesSection />
 				<FeaturesSection />

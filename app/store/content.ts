@@ -217,4 +217,45 @@ export const useContentStore = create<ContentStore>(() => ({
 			answer: 'Yes, TrakkCo stores all generated documents—such as care plans, risk assessments, and reports—in one central, accessible system. This ensures that records are easy to retrieve, securely managed, and consistently updated to reflect the most recent information.',
 		},
 	],
+	topFeatures: {
+		title: "TrakkCo's Top Features",
+		subtitle:
+			'Create, manage, and document – effortlessly. Powerful tool designed to streamline care agency workflows.',
+		features: [
+			{
+				title: 'Care Plan Walkthroughs',
+				description:
+					'Step-by-step guidance to create clear, compliant care plans tailored to every service user.',
+			},
+			{
+				title: 'Risk Assessment Suggestions',
+				description:
+					'Proactively identify risks and receive actionable mitigation strategies with intuitive prompts.',
+			},
+			{
+				title: 'Incident Report Walkthroughs',
+				description:
+					'Simplify incident reporting with structured workflows that capture all essential details.',
+			},
+			{
+				title: 'Compliment & Comment Reports',
+				description: 'Document positive feedback and general observations effortlessly for a balanced record.',
+			},
+			{
+				title: 'Automated Document Generation',
+				description:
+					'Instantly generate professional, ready-to-use care plans, reports, and assessments with a single click.',
+			},
+			{
+				title: 'Real-Time Updates to Documentation',
+				description:
+					'Make instant updates by simply telling your AI assistant the changes – watch them seamlessly incorporated into the documents.',
+			},
+			{
+				title: 'Centralised Document Management',
+				description:
+					'Keep all generated care plans, risk assessments, and reports in one secure, organised place.',
+			},
+		],
+	},
 }))

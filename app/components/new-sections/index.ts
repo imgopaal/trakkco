@@ -8,6 +8,7 @@ import { Header } from './header'
 import { Hero } from './hero'
 import { WhyTrakkCoSection } from './why-trakkco-section'
 import { FAQSection } from './faq-section'
+import { TopFeatures } from './top-features'
 
 export {
 	AboutUsSection,
@@ -20,4 +21,5 @@ export {
 	Hero,
 	WhyTrakkCoSection,
 	FAQSection,
+	TopFeatures
 }
