@@ -8,7 +8,7 @@ export function FAQSection() {
 
 	return (
 		<section id="faq" className="py-24 bg-black/5">
-			<div className="container px-4 md:px-6">
+			<div className="container px-4 md:px-6 m-auto">
 				<div className="flex flex-col items-center justify-center space-y-4 text-center">
 					<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">
 						Frequently Asked Questions

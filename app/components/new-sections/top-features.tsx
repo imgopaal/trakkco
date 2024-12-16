@@ -30,35 +30,61 @@ export function TopFeatures() {
 				</div>
 				<Tabs defaultValue={features[0].title} className="w-full mx-auto">
 					<div className="relative">
-						<TabsList className="w-full h-auto flex flex-wrap justify-center gap-2 bg-transparent">
-							{features.map(feature => (
+						<TabsList className="w-full h-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-2 bg-transparent !m-0 !p-0 border-0">
+							{features.map((feature) => (
 								<TabsTrigger
 									key={feature.title}
 									value={feature.title}
-									className="flex-1 text-white min-w-[20rem] max-w-[22rem] px-4 py-2.5 text-sm md:text-base
-                    data-[state=active]:text-white data-[state=active]:bg-purple-900/60 transition-all duration-200 bg-purple-900/30"
+									className={`
+										relative px-4 py-2.5 text- truncate
+										text-white hover:text-zinc-300
+										data-[state=active]:text-purple-300 
+										data-[state=active]:after:content-['']
+										data-[state=active]:after:absolute 
+										data-[state=active]:after:bottom-0 
+										data-[state=active]:after:left-0
+										data-[state=active]:after:w-full 
+										data-[state=active]:after:h-0.5
+										data-[state=active]:after:bg-purple-500
+										transition-all duration-200
+										rounded-none
+										`}
 								>
-									{feature.title}
+									<span className="block text-md font-medium">{feature.title}</span>
 								</TabsTrigger>
 							))}
 						</TabsList>
+						<div className="mt-0 w-full h-px bg-zinc-800" />
 					</div>
 					{features.map(feature => (
-						<TabsContent key={feature.title} value={feature.title} className="mt-8 md:mt-10 px-4">
-							<div className="flex flex-col items-center space-y-6">
-								<h3 className="text-2xl md:text-3xl font-bold text-white">{feature.title}</h3>
-								<p className="text-zinc-400 text-center max-w-2xl text-base md:text-lg">
-									{feature.description}
-								</p>
-								<div className="w-full max-w-xl space-y-4 mt-6">
-									<div className="flex items-start space-x-3">
-										<div className="w-5 h-5 rounded-full bg-purple-500 mt-1 flex-shrink-0" />
-										<p className="text-zinc-300">Example feature point for {feature.title}</p>
-									</div>
-									<div className="flex items-start space-x-3">
-										<div className="w-5 h-5 rounded-full bg-purple-500 mt-1 flex-shrink-0" />
-										<p className="text-zinc-300">Another key benefit of this feature</p>
-									</div>
+						<TabsContent key={feature.title} value={feature.title} className="mt-8 md:mt-10">
+							<div className="flex flex-col items-start max-w-3xl mx-auto">
+								<h3 className="text-2xl md:text-3xl font-bold text-white mb-4">{feature.title}</h3>
+								<p className="text-zinc-400 text-base md:text-lg mb-8">{feature.description}</p>
+								<div className="w-full space-y-4">
+									{[1, 2, 3].map((item, index) => (
+										<div key={index} className="flex items-center gap-3">
+											<div className="w-5 h-5 rounded-full bg-purple-700 flex items-center justify-center">
+												<svg
+													className="w-3 h-3 text-white"
+													fill="none"
+													strokeWidth="3"
+													stroke="currentColor"
+													viewBox="0 0 24 24"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path
+														strokeLinecap="round"
+														strokeLinejoin="round"
+														d="M5 13l4 4L19 7"
+													/>
+												</svg>
+											</div>
+											<span className="text-zinc-300">
+												Feature point {item} for {feature.title}
+											</span>
+										</div>
+									))}
 								</div>
 							</div>
 						</TabsContent>

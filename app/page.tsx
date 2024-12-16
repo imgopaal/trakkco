@@ -14,9 +14,8 @@ import {
 	Hero,
 	TopFeatures,
 	WhyTrakkCoSection,
+	Pricing
 } from './components/new-sections/index'
-
-import Pricing from './components/sections/Pricing'
 
 import AOS from 'aos'
 import 'aos/dist/aos.css'

@@ -223,36 +223,36 @@ export const useContentStore = create<ContentStore>(() => ({
 			'Create, manage, and document – effortlessly. Powerful tool designed to streamline care agency workflows.',
 		features: [
 			{
-				title: 'Care Plan Walkthroughs',
+				title: 'Care Plans',
 				description:
 					'Step-by-step guidance to create clear, compliant care plans tailored to every service user.',
 			},
 			{
-				title: 'Risk Assessment Suggestions',
+				title: 'Risk Assessments',
 				description:
 					'Proactively identify risks and receive actionable mitigation strategies with intuitive prompts.',
 			},
 			{
-				title: 'Incident Report Walkthroughs',
+				title: 'Incident Reports',
 				description:
 					'Simplify incident reporting with structured workflows that capture all essential details.',
 			},
 			{
-				title: 'Compliment & Comment Reports',
+				title: 'CQC Compliance',
 				description: 'Document positive feedback and general observations effortlessly for a balanced record.',
 			},
 			{
-				title: 'Automated Document Generation',
+				title: 'Automated Doc Builder',
 				description:
 					'Instantly generate professional, ready-to-use care plans, reports, and assessments with a single click.',
 			},
 			{
-				title: 'Real-Time Updates to Documentation',
+				title: 'Live Doc Updates',
 				description:
 					'Make instant updates by simply telling your AI assistant the changes – watch them seamlessly incorporated into the documents.',
 			},
 			{
-				title: 'Centralised Document Management',
+				title: 'Centralized Doc Manager',
 				description:
 					'Keep all generated care plans, risk assessments, and reports in one secure, organised place.',
 			},
