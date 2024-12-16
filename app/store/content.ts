@@ -9,6 +9,7 @@ export const useContentStore = create<ContentStore>(() => ({
 		{ label: 'Why TrakkCo', href: '#why-trakkco' },
 		{ label: 'About Us', href: '#about-us' },
 		{ label: 'Pricing', href: '#pricing' },
+		{ label: 'FAQs', href: '#faq' },
 	],
 	hero: {
 		title: 'Your Expertise, Supercharged by AI',

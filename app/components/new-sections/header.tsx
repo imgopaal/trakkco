@@ -40,6 +40,7 @@ export function Header() {
 									height={50}
 									width={120}
 									alt="tracko logo"
+									className='min-w-36'
 								/>
 							</div>
 						</Link>
