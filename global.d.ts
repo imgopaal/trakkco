@@ -70,6 +70,11 @@ export interface Section {
 	buttonText?: string
 }
 
+interface FAQItem {
+	question: string
+	answer: string
+}
+
 export interface ContentStore {
 	navigation: NavItem[]
 	hero: {
@@ -83,4 +88,5 @@ export interface ContentStore {
 		description: string
 		tiers: PricingTier[]
 	}
+	faq: FAQItem[]
 }

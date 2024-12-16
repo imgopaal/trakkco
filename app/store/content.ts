@@ -12,13 +12,14 @@ export const useContentStore = create<ContentStore>(() => ({
 	],
 	hero: {
 		title: 'Your Expertise, Supercharged by AI',
-		tagline: 'Precision, compliance, and control—all guided by you.',
+		tagline:
+			'No more headaches, no more manual paperwork. Just smarter care documentation powered by AI and driven by you.',
 		cta: 'Get Started - 30 Days Risk Free',
 	},
 	sections: [
 		{
 			id: 'edge',
-			title: 'Your Expertise, Elevated by AI',
+			title: 'Your Team. Empowered by AI',
 			content:
 				"Care documentation shouldn't be a battle between automation and control. With TrakkCo, it's not. TrakkCo is designed to enhance your expertise, placing care coordinators and office staff firmly in the driver's seat. Every AI-powered suggestion, every refined document, every compliance check—fully guided by you. With TrakkCo, you hold the power to create seamless, precise, and fully personalized documentation while maintaining full control over every detail. It's not just automation; it's an edge that transforms your experience into actionable brilliance.",
 			futureVision:
@@ -33,77 +34,78 @@ export const useContentStore = create<ContentStore>(() => ({
 		{
 			id: 'challenges',
 			title: 'Turn Complexity Into Simplicity',
-			content: "In today's care environment, challenges like these demand expert solutions:",
+			content: 'Goodbye Documentation Headaches.',
 			challenges: [
-				{ title: 'Ever-Growing Paperwork', description: 'Manual documentation saps time and energy.' },
 				{
-					title: 'Compliance Complexity',
-					description: 'Meeting standards while maintaining clarity can feel impossible.',
+					title: 'Overwhelmed by Paperwork?',
+					description: 'Manual Care Plans and Reports take time. Let TrakkCo do the heavy lifting.',
+				},
+				{
+					title: 'Navigating CQC Complexity?',
+					description: 'Keep your documentation compliant with AI-powered precision.',
 				},
 				{
 					title: 'Consistency Challenges',
-					description: 'Translating team expertise into seamless, client-ready outputs is an uphill battle.',
+					description: 'Align your team’s efforts into professional, standardized outputs.',
 				},
 			],
-			solution:
-				'TrakkCo is the solution. It ensures every plan, risk assessment, and report is structured, compliant, and completely customizable—guided entirely by the people who know best: you and your team.',
-			compassion:
-				'Compassion in Action: By taking care of the technical details, TrakkCo helps you focus on the heart of care—building trust, understanding individual needs, and delivering services that truly make a difference.',
+			// solution:
+			// 	'TrakkCo is the solution. It ensures every plan, risk assessment, and report is structured, compliant, and completely customizable—guided entirely by the people who know best: you and your team.',
+			// compassion:
+			// 	'Compassion in Action: By taking care of the technical details, TrakkCo helps you focus on the heart of care—building trust, understanding individual needs, and delivering services that truly make a difference.',
 		},
 		{
 			id: 'features',
-			title: 'Your Expertise. Your Insights. TrakkCo Does the Rest.',
+			title: 'Features That Put You in Control.',
 			features: [
 				{
-					title: 'Precision at Every Step',
+					title: 'Smart Risk Assessments',
 					description:
-						'AI suggestions are powered by your expertise, giving you the tools to refine, approve, or customize every detail.',
+						'Collaborate with AI to identify risks based on your expertise and predefined triggers. TrakkCo provides actionable suggestions to mitigate potential issues, ensuring every decision is grounded in safety and compliance.',
 				},
 				{
-					title: 'Empowered Collaboration',
+					title: 'Real-Time CQC Validation',
 					description:
-						'TrakkCo works alongside your team like a trusted assistant, enhancing—not replacing—your decision-making.',
+						'Stay compliant effortlessly. With built-in checks, TrakkCo flags any gaps in your documentation and provides actionable suggestions to meet CQC standards before you finalize.',
 				},
 				{
-					title: 'Tailored Care Plans',
+					title: 'Effortless Refinement',
 					description:
-						'Craft professional, compliant plans that reflect your understanding of each service user.',
+						'Review every AI-suggested document, tweak the language, adjust details, or regenerate sections with a single click. It’s not about what TrakkCo does for you—it’s about what you and TrakkCo achieve together.',
 				},
-				{
-					title: 'Smart Risk Management',
-					description:
-						'Proactively identify risks and receive actionable suggestions—all within your control.',
-				},
-				{
-					title: 'Effortless Adjustments',
-					description:
-						"Tweak and approve every output to ensure it aligns with your team's high standards and care philosophies.",
-				},
+				// {
+				// 	title: 'Smart Risk Management',
+				// 	description:
+				// 		'Proactively identify risks and receive actionable suggestions—all within your control.',
+				// },
+				// {
+				// 	title: 'Effortless Adjustments',
+				// 	description:
+				// 		"Tweak and approve every output to ensure it aligns with your team's high standards and care philosophies.",
+				// },
 			],
 		},
 		{
 			id: 'why-trakkco',
-			title: 'A Tool That Amplifies, Not Automates',
+			title: 'Documentation That Works With You.',
 			content:
 				"TrakkCo isn't just about getting the job done—it's about doing it your way. Every feature is designed to reflect your expertise and amplify your unique voice in care documentation.",
 			benefits: [
 				{
-					title: 'Human Expertise First',
-					description:
-						'AI works as an extension of your knowledge, providing suggestions you can refine, reject, or approve.',
+					title: 'Empower Your Team',
+					description: 'AI amplifies your expertise without replacing it.',
 				},
 				{
-					title: 'Full Visibility',
-					description: 'Stay informed and in control with transparent workflows and real-time validation.',
+					title: 'Collaborative Workflows',
+					description: 'Full visibility and control over every Care Plan, Risk Assessment, and Report.',
 				},
 				{
-					title: 'Customizable Outputs',
-					description:
-						"Make every document uniquely yours—every care plan, risk assessment, and report reflects your team's expertise.",
+					title: 'Custom Outputs',
+					description: 'Tailor documentation to match your team’s high standards.',
 				},
 			],
-			conclusion:
-				'With TrakkCo, your insights drive the process, ensuring the final outputs always align with your standards.',
+			// conclusion:
+			// 	'With TrakkCo, your insights drive the process, ensuring the final outputs always align with your standards.',
 		},
 		{
 			id: 'about-us',
@@ -196,4 +198,22 @@ export const useContentStore = create<ContentStore>(() => ({
 			},
 		],
 	},
+	faq: [
+		{
+			question: "What is TrakkCo's primary purpose?",
+			answer: 'TrakkCo is an AI-powered care documentation system designed to streamline the creation of care plans, risk assessments, incident reports, and compliance documents. It ensures these documents are professional, ready for regulatory compliance, and customised to meet specific care requirements.',
+		},
+		{
+			question: 'How does TrakkCo ensure compliance with care documentation standards?',
+			answer: 'TrakkCo incorporates built-in compliance checks based on current regulatory standards, such as the up-to-date CQC guidelines. It validates inputs in real-time, ensuring all required information is accurate and complete before finalizing any documentation.',
+		},
+		{
+			question: 'What makes TrakkCo user-friendly for care agency staff?',
+			answer: 'TrakkCo uses a structured, step-by-step approach to gather information. It provides examples, rephrases unclear questions, and adapts prompts based on previous answers, ensuring users feel supported and confident throughout the documentation process.',
+		},
+		{
+			question: 'Can TrakkCo keep all care documentation organised?',
+			answer: 'Yes, TrakkCo stores all generated documents—such as care plans, risk assessments, and reports—in one central, accessible system. This ensures that records are easy to retrieve, securely managed, and consistently updated to reflect the most recent information.',
+		},
+	],
 }))

@@ -7,6 +7,7 @@ import { FutureSection } from './future-section'
 import { Header } from './header'
 import { Hero } from './hero'
 import { WhyTrakkCoSection } from './why-trakkco-section'
+import { FAQSection } from './faq-section'
 
 export {
 	AboutUsSection,
@@ -18,4 +19,5 @@ export {
 	Header,
 	Hero,
 	WhyTrakkCoSection,
+	FAQSection,
 }

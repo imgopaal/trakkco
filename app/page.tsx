@@ -9,6 +9,7 @@ import {
 	Header,
 	Hero,
 	WhyTrakkCoSection,
+	FAQSection
 } from './components/new-sections/index'
 
 import Pricing from './components/sections/Pricing'
@@ -28,6 +29,7 @@ function Home() {
 				<Pricing />
 				<CTASection />
 				<FutureSection />
+				<FAQSection />
 			</main>
 			<Footer />
 		</div>
