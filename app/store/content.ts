@@ -146,7 +146,7 @@ export const useContentStore = create<ContentStore>(() => ({
 	],
 	pricing: {
 		title: 'Simple, Transparent Pricing',
-		description: 'Choose the perfect plan for your team. All plans include a 30-day free trial.',
+		description: 'Choose the perfect plan for your team. All plans include a 30 day money back guarantee.',
 		tiers: [
 			{
 				name: 'Starter',
