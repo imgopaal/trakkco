@@ -1,7 +1,8 @@
 'use client'
-import React from 'react'
+import { plans } from '@/app/consts'
+import { PricingCardProps } from '@/global'
 import { Check } from 'lucide-react'
-import { PricingCardProps, PricingPlan } from '@/global'
+import React from 'react'
 
 const PricingCard: React.FC<PricingCardProps> = ({
 	title,
@@ -81,77 +82,35 @@ const Pricing: React.FC = () => {
 		// Add your plan selection logic here
 	}
 
-	const plans: PricingPlan[] = [
-		{
-			title: 'Core',
-			price: '180.00',
-			ctaText: 'Get Started',
-			features: [
-				{ text: 'Up to 5 Team Members', included: true },
-				{ text: 'Care Plan Workflows', included: true },
-				{ text: 'Risk Assessment Workflows', included: true },
-				{ text: 'Reports Workflows', included: true },
-				{
-					text: 'Document Generation: Instantly create professional and compliant care documents.',
-					included: true,
-				},
-				{
-					text: 'Real-Time Document Updating: Make edits seamlessly, with changes reflected instantly across your system.',
-					included: true,
-				},
-				{
-					text: 'Ticket and Email Support: Get responsive assistance when you need it.',
-					included: true,
-				},
-			],
-		},
-		{
-			title: 'Pro',
-			price: 'coming-soon',
-			ctaText: 'Learn More',
-			features: [
-				{ text: 'mock', included: false },
-				{ text: 'mock', included: false },
-				{ text: 'mock', included: false },
-				{ text: 'mock', included: false },
-				{ text: 'mock', included: false },
-				{ text: 'mock', included: false },
-				{ text: 'mock', included: false },
-				{ text: 'mock', included: false },
-				{ text: 'mock', included: false },
-			],
-		},
-		{
-			title: 'Enterprise',
-			price: 'coming-soon',
-			ctaText: 'Learn More',
-			features: [
-				{ text: 'mock', included: false },
-				{ text: 'mock', included: false },
-				{ text: 'mock', included: false },
-				{ text: 'mock', included: false },
-				{ text: 'mock', included: false },
-				{ text: 'mock', included: false },
-				{ text: 'mock', included: false },
-				{ text: 'mock', included: false },
-				{ text: 'mock', included: false },
-			],
-		},
-	]
-
 	return (
 		<section id="pricing" className="py-24 relative">
 			<div className="absolute inset-0 bg-gradient-to-b from-black/50 to-purple-900/20"></div>
 			<div className="relative max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8">
-				<div className="text-center mb-16">
+				<div className="text-center mb-16" data-aos="fade-up" data-aos-duration="800" data-aos-once="true">
 					<h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Simple, Transparent Pricing</h2>
 					<p className="text-gray-400 max-w-2xl mx-auto">
 						Choose the perfect plan for your team. All plans include a 14-day free trial.
 					</p>
 				</div>
 				<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-					{plans.map(plan => (
-						<PricingCard key={plan.title} {...plan} onSelectPlan={handleSelectPlan} />
+					{plans.map((plan, index) => (
+						<div
+							key={plan.title}
+							data-aos="fade-up"
+							data-aos-delay={`${index * 150}`}
+							data-aos-duration="800"
+							data-aos-once="true"
+						>
+							<PricingCard
+								key={plan.title}
+								{...plan}
+								onSelectPlan={handleSelectPlan}
+								data-aos="fade-up"
+								data-aos-delay={200 + index * 150}
+								data-aos-duration="800"
+								data-aos-once="true"
+							/>
+						</div>
 					))}
 				</div>
 			</div>

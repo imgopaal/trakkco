@@ -12,14 +12,33 @@ export function AboutUsSection() {
 		<section id="about-us" className="py-24 bg-gradient-to-br from-purple-900/10 via-background to-background">
 			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="container px-4 md:px-6 m-auto">
-					<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">{aboutUs.title}</h2>
-					<p className="mt-4 text-lg text-muted-foreground">{aboutUs.content}</p>
+					<h2
+						className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl"
+						data-aos="fade-up"
+						data-aos-duration="800"
+						data-aos-once="true"
+					>
+						{aboutUs.title}
+					</h2>
+					<p
+						className="mt-4 text-lg text-muted-foreground"
+						data-aos="fade-up"
+						data-aos-delay="200"
+						data-aos-duration="800"
+						data-aos-once="true"
+					>
+						{aboutUs.content}
+					</p>
 					<div className="grid gap-6 mt-8 md:grid-cols-3">
 						{aboutUs.points !== undefined &&
 							aboutUs.points.map((point, index) => (
 								<Card
 									key={index}
 									className="bg-purple-700/10 hover:bg-purple-700/30 cursor-pointer border-purple-400/80 transition-all duration-300 ease-in-out"
+									data-aos="fade-up"
+									data-aos-delay={300 + index * 150}
+									data-aos-duration="800"
+									data-aos-once="true"
 								>
 									<CardHeader>
 										<CardTitle>{point.title}</CardTitle>

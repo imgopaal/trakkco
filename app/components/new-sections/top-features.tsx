@@ -10,8 +10,21 @@ export function TopFeatures() {
 		<section id="top-features" className="py-24 relative">
 			<div className="relative max-w-[100rem] mx-auto px-4 sm:px-6 lg:px-8">
 				<div className="flex flex-col items-center justify-center space-y-4 text-center mb-10">
-					<h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white">{title}</h2>
-					<p className="max-w-[700px] text-zinc-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+					<h2
+						className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-white"
+						data-aos="fade-up"
+						data-aos-duration="800"
+						data-aos-once="true"
+					>
+						{title}
+					</h2>
+					<p
+						className="max-w-[700px] text-zinc-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed"
+						data-aos="fade-up"
+						data-aos-delay="200"
+						data-aos-duration="800"
+						data-aos-once="true"
+					>
 						{subtitle}
 					</p>
 				</div>
