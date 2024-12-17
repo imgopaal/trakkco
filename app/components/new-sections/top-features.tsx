@@ -30,7 +30,7 @@ export function TopFeatures() {
 				</div>
 				<Tabs defaultValue={features[0].title} className="w-full mx-auto">
 					<div className="relative">
-						<TabsList className="w-full h-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-2 bg-transparent !m-0 !p-0 border-0">
+						<TabsList className="w-full h-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-2 bg-transparent !m-0 !p-0 border-0">
 							{features.map((feature) => (
 								<TabsTrigger
 									key={feature.title}
