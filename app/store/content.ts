@@ -246,13 +246,13 @@ export const useContentStore = create<ContentStore>(() => ({
 				description:
 					'Instantly generate professional, ready-to-use care plans, reports, and assessments with a single click.',
 			},
+			// {
+			// 	title: 'Live Doc Updates',
+			// 	description:
+			// 		'Make instant updates by simply telling your AI assistant the changes – watch them seamlessly incorporated into the documents.',
+			// },
 			{
-				title: 'Live Doc Updates',
-				description:
-					'Make instant updates by simply telling your AI assistant the changes – watch them seamlessly incorporated into the documents.',
-			},
-			{
-				title: 'Centralized Doc Manager',
+				title: 'Centralised Doc Manager',
 				description:
 					'Keep all generated care plans, risk assessments, and reports in one secure, organised place.',
 			},
